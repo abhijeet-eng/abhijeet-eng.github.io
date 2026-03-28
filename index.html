@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhijeet Khandelwal | Senior Staff Machine Learning Engineer</title>
+  <meta name="description" content="Portfolio of Abhijeet Khandelwal, a Senior Staff Machine Learning Engineer focused on GenAI, machine learning, analytics, and semiconductor manufacturing systems.">
+  <link rel="canonical" href="https://abhijeet-eng.github.io/">
+  <meta property="og:title" content="Abhijeet Khandelwal | Senior Staff Machine Learning Engineer">
+  <meta property="og:description" content="Senior machine learning engineer building GenAI, analytics, and computer vision systems with measurable manufacturing impact.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0d10;
+      --bg-soft: #11161b;
+      --panel: #12181d;
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #f5f7fa;
+      --muted: #96a0aa;
+      --accent: #00bfa5;
+      --max: 1040px;
+      --nav-h: 72px;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(0, 191, 165, 0.08), transparent 28%),
+        linear-gradient(180deg, #090c0f 0%, #0a0d10 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
+    .page { padding-top: var(--nav-h); }
+    .section { padding: 72px 0; scroll-margin-top: calc(var(--nav-h) + 12px); }
+    .section:first-of-type { padding-top: 88px; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: "Syne", sans-serif;
+      letter-spacing: -0.03em;
+    }
+
+    h1 { font-size: clamp(2.6rem, 7vw, 4.8rem); line-height: 0.95; }
+    h2 { font-size: clamp(1.6rem, 3.3vw, 2.4rem); margin-bottom: 10px; }
+    h3 { font-size: 1.12rem; }
+    p { margin: 0; color: var(--muted); line-height: 1.7; }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      height: var(--nav-h);
+      background: rgba(10, 13, 16, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      z-index: 20;
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      padding: 0.65rem 0.85rem;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: transparent;
+      color: var(--text);
+    }
+
+    .menu-btn span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+    }
+
+    .hero {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.06rem;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .icon-link {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .icon-link:hover {
+      color: var(--text);
+      border-color: rgba(0, 191, 165, 0.45);
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 28px;
+      padding-left: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: 8px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+    }
+
+    .role-header,
+    .project-row,
+    .edu-line,
+    .writing-item {
+      display: grid;
+      gap: 6px;
+    }
+
+    .role-meta,
+    .muted {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .bullet-list {
+      margin: 14px 0 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 14px;
+    }
+
+    .stack span {
+      padding: 0.36rem 0.58rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .list-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .project-item,
+    .writing-item {
+      padding: 0 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-item:last-child,
+    .writing-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .project-topline {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .impact {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 28px;
+    }
+
+    .skill-group h3 {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .skill-group p {
+      font-size: 0.98rem;
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-line {
+      font-size: 1rem;
+    }
+
+    .contact-line a {
+      color: var(--text);
+      border-bottom: 1px solid rgba(0, 191, 165, 0.5);
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 820px) {
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 1rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.6rem;
+        background: var(--bg-soft);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+      }
+
+      .nav-links.open { display: flex; }
+      .menu-btn { display: inline-block; }
+      .skill-grid,
+      .compact-grid { grid-template-columns: 1fr; }
+      .container { width: min(var(--max), calc(100% - 1.25rem)); }
+      .section { padding: 56px 0; }
+      .section:first-of-type { padding-top: 72px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .fade { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Abhijeet Khandelwal</a>
+      <button class="menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul class="nav-links" id="site-nav">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page" id="top">
+    <main class="container">
+      <section class="section hero fade" id="hero">
+        <p class="eyebrow">Portfolio</p>
+        <h1 id="hero-name"></h1>
+        <div class="muted" id="hero-title"></div>
+        <p id="hero-headline"></p>
+        <div class="hero-links" id="hero-links"></div>
+      </section>
+
+      <section class="section fade" id="experience">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Work focused on measurable business and engineering outcomes.</h2>
+        </div>
+        <div class="timeline" id="experience-list"></div>
+      </section>
+
+      <section class="section fade" id="projects">
+        <div class="section-head">
+          <p class="eyebrow">Selected Projects</p>
+          <h2>Representative work from enterprise machine learning, analytics, and manufacturing systems.</h2>
+        </div>
+        <div class="list-grid" id="project-list"></div>
+      </section>
+
+      <section class="section fade" id="skills">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>Core technical areas.</h2>
+        </div>
+        <div class="skill-grid" id="skill-groups"></div>
+      </section>
+
+      <section class="section fade" id="education">
+        <div class="section-head">
+          <p class="eyebrow">Education &amp; Publications</p>
+          <h2>Academic background, certifications, and publication record.</h2>
+        </div>
+        <div class="compact-grid">
+          <div id="education-block"></div>
+          <div id="publication-block"></div>
+        </div>
+      </section>
+
+      <section class="section fade" id="writing-section" hidden>
+        <div class="section-head">
+          <p class="eyebrow">Writing</p>
+          <h2>Selected articles and long-form writing.</h2>
+        </div>
+        <div class="list-grid" id="writing-list"></div>
+      </section>
+
+      <section class="section fade" id="contact">
+        <div class="section-head">
+          <p class="eyebrow">Contact</p>
+          <h2>Open to interesting conversations.</h2>
+        </div>
+        <p class="contact-line" id="contact-line"></p>
+        <div class="hero-links" id="contact-links" style="margin-top:16px;"></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const CONFIG = {
+      name: "Abhijeet Khandelwal",
+      title: "Senior Staff Machine Learning Engineer",
+      headline: "I have delivered GenAI, machine learning, and analytics systems at Intel that increased factory productivity, generated tens of millions in manufacturing savings, and transformed legacy workflows into scalable cloud-based platforms.",
+      github: "",
+      linkedin: "https://www.linkedin.com/in/abhijeet-khandelwal-9a034728/",
+      email: "abhijeetkhandelwal@outlook.com",
+      phone: "+1-385-515-8567",
+      experience: [
+        {
+          company: "Intel Corporation",
+          role: "Senior Staff Machine Learning Engineer",
+          period: "April 2025 - Present",
+          location: "Austin, Texas",
+          bullets: [
+            "Leading the design and deployment of multiple GenAI, machine learning, and analytics applications for semiconductor manufacturing operations.",
+            "Driving architecture decisions with stakeholders, data scientists, and engineers so new systems scale cleanly across factory use cases.",
+            "Mentoring engineers on GenAI frameworks and applied ML while staying hands-on in technical deep-dives and implementation."
+          ],
+          stack: ["GenAI", "Machine Learning", "Analytics", "Architecture", "Semiconductor Manufacturing"]
+        },
+        {
+          company: "Intel Corporation",
+          role: "Software Engineering Manager",
+          period: "August 2022 - April 2025",
+          location: "Austin, Texas",
+          bullets: [
+            "Led a team of 12 engineers and data scientists that delivered and maintained 3 complex ML and analytics web applications tied to roughly $100M in yearly manufacturing savings.",
+            "Spearheaded Intel's inaugural GenAI platform, integrating SharePoint, Word documents, and factory systems to improve knowledge discovery, root cause analysis, and proactive risk mitigation, contributing to a 10% productivity boost.",
+            "Improved solution delivery by 16% through a stronger DevOps framework and agile execution model."
+          ],
+          stack: ["GenAI", "ML Web Apps", "DevOps", "Agile", "Factory Systems"]
+        },
+        {
+          company: "Intel Corporation",
+          role: "Staff Machine Learning Engineer",
+          period: "April 2021 - August 2022",
+          location: "Austin, Texas",
+          bullets: [
+            "Built an end-to-end CNN solution for image classification and localization in semiconductor manufacturing, later referenced in an invited SPIE paper.",
+            "Developed a KPI and quality prediction dashboard that combined structured and unstructured data for near real-time finished product quality insight.",
+            "Helped re-architect legacy solutions into cloud-based systems, contributing to $30M in yearly savings from ML-based defect detection and a 15% lift in developer productivity."
+          ],
+          stack: ["CNN", "Computer Vision", "Quality Prediction", "Cloud Migration", "Analytics"]
+        },
+        {
+          company: "Intel Corporation",
+          role: "Senior Data Scientist",
+          period: "April 2019 - April 2021",
+          location: "Austin, Texas",
+          bullets: [
+            "Built a large-scale ETL framework with Python, Airflow, and Modin to calculate critical health metrics across Intel products and sites.",
+            "Developed autoencoder- and GAN-based pipelines to generate minority-class data for downstream image classification models.",
+            "Standardized metric calculations and reporting, saving effort equivalent to 4 full-time employees."
+          ],
+          stack: ["Python", "Airflow", "Modin", "GANs", "Power BI", "Dash"]
+        },
+        {
+          company: "EXL Services",
+          role: "Analytics Consultant",
+          period: "August 2018 - March 2019",
+          location: "Pittsburgh, Pennsylvania",
+          bullets: [
+            "Built analytical dashboards and ad-hoc reporting workflows that connected quantitative analysis to business decisions.",
+            "Developed unsupervised models for customer segmentation and outlier detection in mortgage analytics.",
+            "Contributed to improved mortgage delinquency outcomes through better reporting and predictive analysis."
+          ],
+          stack: ["Tableau", "Alteryx", "SQL", "Customer Segmentation", "Outlier Detection"]
+        },
+        {
+          company: "Tata Consultancy Services",
+          role: "Analyst / Software Developer",
+          period: "July 2013 - July 2017",
+          location: "India",
+          bullets: [
+            "Applied clustering-based machine learning to fraud detection work for an audit organization.",
+            "Built tax collection modules for an African Revenue Services client using Java, SQL, JavaScript, and HTML.",
+            "Developed an early foundation in enterprise software delivery, analytics, and data-driven problem solving."
+          ],
+          stack: ["Java", "SQL", "JavaScript", "HTML", "Fraud Detection", "Clustering"]
+        }
+      ],
+      projects: [
+        {
+          title: "Intel GenAI Knowledge Platform",
+          description: "An enterprise GenAI platform that connected SharePoint, Word documents, and factory systems so engineers could find operational knowledge and accelerate root cause analysis.",
+          impact: "Contributed to a 10% productivity boost in semiconductor manufacturing workflows.",
+          stack: ["GenAI", "Knowledge Discovery", "Enterprise Search", "Factory Systems"],
+          github: ""
+        },
+        {
+          title: "CNN Defect Detection and Localization",
+          description: "A computer vision pipeline for image classification and localization in semiconductor manufacturing, built to strengthen defect detection and virtual metrology workflows.",
+          impact: "Associated with $30M in yearly savings and an invited SPIE publication.",
+          stack: ["CNN", "Computer Vision", "Image Localization", "Semiconductor Manufacturing"],
+          github: ""
+        },
+        {
+          title: "Factory Health ETL Framework",
+          description: "A large-scale ETL system that standardized critical health metrics across Intel products and sites for more consistent analytics and reporting.",
+          impact: "Saved work equivalent to 4 full-time employees.",
+          stack: ["Python", "Airflow", "Modin", "ETL", "Metrics Standardization"],
+          github: ""
+        },
+        {
+          title: "Customer Segmentation and Risk Analytics",
+          description: "A set of dashboards and unsupervised models for segmentation and outlier detection that improved visibility into mortgage performance.",
+          impact: "Helped improve mortgage delinquency outcomes.",
+          stack: ["Tableau", "Alteryx", "SQL", "Segmentation", "Outlier Detection"],
+          github: ""
+        }
+      ],
+      skills: {
+        "Languages": ["Python", "SQL", "R", "Scala", "Perl", "Java", "JavaScript", "HTML"],
+        "ML Frameworks": ["LangChain", "LangGraph", "AutoGen", "PGVector", "TensorFlow", "PyTorch", "Spark"],
+        "Infrastructure": ["Git", "CI/CD", "Docker", "Airflow", "Ansible", "Kafka", "Sentry", "HBase", "MongoDB", "Azure Blob", "MySQL", "SQL Server", "Redis"],
+        "Domains": ["GenAI", "Machine Learning", "Analytics", "Computer Vision", "MLOps", "Semiconductor Manufacturing", "Predictive Analytics", "Data Visualization"]
+      },
+      education: {
+        degree: "Master of Science in Information Systems, Concentration in Data Analytics",
+        institution: "University at Buffalo, School of Management",
+        year: "2018",
+        additional: [
+          "Bachelor of Science in Mechanical Engineering — Rajiv Gandhi Technical University (2013)",
+          "Coursework: Statistics, Advanced Statistics, Machine Learning, Predictive Analytics, DBMS, Distributed Computing, and OLAP / Data Warehousing.",
+          "Certifications: SAS Base Programmer, ITIL V3 Foundation, Six Sigma Yellow Belt, Deep Learning Specialization, MLOps Specialization.",
+          "Recognition: 2 Group Recognition Awards, 16 Intel Division Recognition Awards, Intel Excellent Achievement Award, Superior Department Award, and 25+ peer recognitions."
+        ]
+      },
+      publications: [
+        {
+          title: "A virtual defect metrology system utilizing photolithography scanner topography maps to quantitatively detect gross defects, perform in-line yield prediction, and identify defect generating tools",
+          venue: "SPIE Proceedings 13426",
+          year: "2025",
+          url: "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202502264724243383"
+        }
+      ],
+      writing: []
+    };
+
+    const icon = {
+      linkedin: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v2"></path><rect x="2" y="8" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>',
+      github: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.94-2.65c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.46c0 5.42 3.3 6.61 6.44 7A3.4 3.4 0 0 0 9 18.1V22"></path></svg>',
+      email: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="m4 8 8 6 8-6"></path></svg>'
+    };
+
+    const qs = (selector) => document.querySelector(selector);
+    const ce = (tag, className) => {
+      const el = document.createElement(tag);
+      if (className) el.className = className;
+      return el;
+    };
+
+    qs("#hero-name").textContent = CONFIG.name;
+    qs("#hero-title").textContent = CONFIG.title;
+    qs("#hero-headline").textContent = CONFIG.headline;
+
+    const renderIconLink = (href, type, label) => {
+      const a = ce("a", "icon-link");
+      a.href = href;
+      if (href.startsWith("http")) {
+        a.target = "_blank";
+        a.rel = "noreferrer";
+      }
+      a.setAttribute("aria-label", label);
+      a.innerHTML = icon[type];
+      return a;
+    };
+
+    const heroLinks = qs("#hero-links");
+    if (CONFIG.github) heroLinks.appendChild(renderIconLink(CONFIG.github, "github", "GitHub"));
+    if (CONFIG.linkedin) heroLinks.appendChild(renderIconLink(CONFIG.linkedin, "linkedin", "LinkedIn"));
+    if (CONFIG.email) heroLinks.appendChild(renderIconLink(`mailto:${CONFIG.email}`, "email", "Email"));
+
+    const experienceList = qs("#experience-list");
+    CONFIG.experience.forEach((item) => {
+      const article = ce("article", "timeline-item");
+      const wrap = ce("div", "role-header");
+      wrap.innerHTML = `
+        <h3>${item.company} — ${item.role}</h3>
+        <div class="role-meta">${item.period} · ${item.location}</div>
+      `;
+      const bullets = ce("ul", "bullet-list");
+      item.bullets.forEach((bullet) => {
+        const li = document.createElement("li");
+        li.textContent = bullet;
+        bullets.appendChild(li);
+      });
+      const stack = ce("div", "stack");
+      item.stack.forEach((tag) => {
+        const span = document.createElement("span");
+        span.textContent = tag;
+        stack.appendChild(span);
+      });
+      article.append(wrap, bullets, stack);
+      experienceList.appendChild(article);
+    });
+
+    const projectList = qs("#project-list");
+    CONFIG.projects.forEach((project) => {
+      const item = ce("article", "project-item");
+      const top = ce("div", "project-topline");
+      top.innerHTML = `<h3>${project.title}</h3>${project.impact ? `<div class="impact">${project.impact}</div>` : ""}`;
+      const desc = document.createElement("p");
+      desc.textContent = project.description;
+      const stack = ce("div", "stack");
+      project.stack.forEach((tag) => {
+        const span = document.createElement("span");
+        span.textContent = tag;
+        stack.appendChild(span);
+      });
+      item.append(top, desc, stack);
+      if (project.github) {
+        const link = document.createElement("p");
+        link.className = "muted";
+        link.innerHTML = `<a href="${project.github}" target="_blank" rel="noreferrer">GitHub</a>`;
+        item.appendChild(link);
+      }
+      projectList.appendChild(item);
+    });
+
+    const skillGroups = qs("#skill-groups");
+    Object.entries(CONFIG.skills).forEach(([group, values]) => {
+      const block = ce("div", "skill-group");
+      block.innerHTML = `<h3>${group}</h3><p>${values.join(", ")}</p>`;
+      skillGroups.appendChild(block);
+    });
+
+    const educationBlock = qs("#education-block");
+    const eduPrimary = ce("div", "edu-line");
+    eduPrimary.innerHTML = `<h3>${CONFIG.education.degree}</h3><p>${CONFIG.education.institution} · ${CONFIG.education.year}</p>`;
+    educationBlock.appendChild(eduPrimary);
+    (CONFIG.education.additional || []).forEach((line) => {
+      const p = document.createElement("p");
+      p.style.marginTop = "12px";
+      p.textContent = line;
+      educationBlock.appendChild(p);
+    });
+
+    const publicationBlock = qs("#publication-block");
+    if (CONFIG.publications.length) {
+      CONFIG.publications.forEach((pub) => {
+        const line = ce("div", "edu-line");
+        line.innerHTML = `<h3>${pub.title}</h3><p><a href="${pub.url}" target="_blank" rel="noreferrer">${pub.venue}</a> · ${pub.year}</p>`;
+        publicationBlock.appendChild(line);
+      });
+    } else {
+      publicationBlock.innerHTML = "<p>No publications listed.</p>";
+    }
+
+    const writingSection = qs("#writing-section");
+    if (CONFIG.writing.length) {
+      writingSection.hidden = false;
+      const writingList = qs("#writing-list");
+      CONFIG.writing.forEach((entry) => {
+        const item = ce("article", "writing-item");
+        item.innerHTML = `<h3><a href="${entry.url}" target="_blank" rel="noreferrer">${entry.title}</a></h3><p>${entry.description}</p>`;
+        writingList.appendChild(item);
+      });
+    }
+
+    qs("#contact-line").innerHTML = `Open to interesting conversations — reach me at <a href="mailto:${CONFIG.email}">${CONFIG.email}</a>.`;
+    const contactLinks = qs("#contact-links");
+    if (CONFIG.github) contactLinks.appendChild(renderIconLink(CONFIG.github, "github", "GitHub"));
+    if (CONFIG.linkedin) contactLinks.appendChild(renderIconLink(CONFIG.linkedin, "linkedin", "LinkedIn"));
+    if (CONFIG.email) contactLinks.appendChild(renderIconLink(`mailto:${CONFIG.email}`, "email", "Email"));
+
+    const menuBtn = qs(".menu-btn");
+    const navLinks = qs(".nav-links");
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    const sections = [...document.querySelectorAll("main .section[id]")];
+    const navItems = [...document.querySelectorAll(".nav-links a")];
+    const setActiveSection = () => {
+      const marker = window.scrollY + window.innerHeight * 0.3;
+      let current = "experience";
+      sections.forEach((section) => {
+        if (marker >= section.offsetTop) current = section.id;
+      });
+      navItems.forEach((item) => item.classList.toggle("active", item.getAttribute("href") === `#${current}`));
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("in");
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade").forEach((el) => observer.observe(el));
+    setActiveSection();
+    window.addEventListener("scroll", setActiveSection, { passive: true });
+    window.addEventListener("resize", setActiveSection);
+  </script>
+</body>
+</html>
