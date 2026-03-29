@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhijeet Khandelwal | Senior Staff Machine Learning Engineer</title>
-  <meta name="description" content="Portfolio of Abhijeet Khandelwal, a Senior Staff Machine Learning Engineer focused on GenAI, machine learning, analytics, and semiconductor manufacturing systems.">
+  <title>Abhijeet Khandelwal | AI Engineering Manager | ML Engineer</title>
+  <meta name="description" content="Portfolio of Abhijeet Khandelwal, an AI engineering manager and ML engineer building GenAI, analytics, and computer vision systems for semiconductor manufacturing.">
   <link rel="canonical" href="https://abhijeet-eng.github.io/">
-  <meta property="og:title" content="Abhijeet Khandelwal | Senior Staff Machine Learning Engineer">
-  <meta property="og:description" content="Senior machine learning engineer building GenAI, analytics, and computer vision systems with measurable manufacturing impact.">
+  <meta property="og:title" content="Abhijeet Khandelwal | AI Engineering Manager | ML Engineer">
+  <meta property="og:description" content="AI engineering manager and ML engineer building GenAI, analytics, and computer vision systems with measurable manufacturing impact.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: "Inter", sans-serif;
@@ -38,11 +39,12 @@
     }
 
     a { color: inherit; text-decoration: none; }
-    button, input, textarea { font: inherit; }
+    button { font: inherit; }
     .container { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; }
     .page { padding-top: var(--nav-h); }
     .section { padding: 72px 0; scroll-margin-top: calc(var(--nav-h) + 12px); }
     .section:first-of-type { padding-top: 88px; }
+
     .eyebrow {
       margin: 0 0 12px;
       color: var(--accent);
@@ -52,16 +54,16 @@
       font-weight: 600;
     }
 
-    h1, h2, h3, h4 {
+    h1, h2, h3 {
       margin: 0;
       font-family: "Syne", sans-serif;
       letter-spacing: -0.03em;
     }
 
-    h1 { font-size: clamp(2.6rem, 7vw, 4.8rem); line-height: 0.95; }
-    h2 { font-size: clamp(1.6rem, 3.3vw, 2.4rem); margin-bottom: 10px; }
+    h1 { font-size: clamp(2.7rem, 7vw, 5rem); line-height: 0.95; }
+    h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); margin-bottom: 10px; }
     h3 { font-size: 1.12rem; }
-    p { margin: 0; color: var(--muted); line-height: 1.7; }
+    p { margin: 0; color: var(--muted); line-height: 1.72; }
 
     .nav {
       position: fixed;
@@ -133,9 +135,14 @@
       gap: 1.25rem;
     }
 
+    .hero-intro {
+      display: grid;
+      gap: 0.55rem;
+    }
+
     .hero p {
-      max-width: 760px;
-      font-size: 1.06rem;
+      max-width: 800px;
+      font-size: 1.05rem;
     }
 
     .hero-links {
@@ -143,6 +150,27 @@
       gap: 0.8rem;
       align-items: center;
       flex-wrap: wrap;
+    }
+
+    .primary-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #06211d;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 24px rgba(0, 191, 165, 0.18);
+    }
+
+    .primary-link:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0, 191, 165, 0.24);
     }
 
     .icon-link {
@@ -202,9 +230,7 @@
     }
 
     .role-header,
-    .project-row,
-    .edu-line,
-    .writing-item {
+    .edu-line {
       display: grid;
       gap: 6px;
     }
@@ -243,14 +269,12 @@
       gap: 22px;
     }
 
-    .project-item,
-    .writing-item {
+    .project-item {
       padding: 0 0 22px;
       border-bottom: 1px solid var(--line);
     }
 
-    .project-item:last-child,
-    .writing-item:last-child {
+    .project-item:last-child {
       border-bottom: 0;
       padding-bottom: 0;
     }
@@ -365,8 +389,10 @@
   <div class="page" id="top">
     <main class="container">
       <section class="section hero fade" id="hero">
-        <h1 id="hero-name"></h1>
-        <div class="muted" id="hero-title"></div>
+        <div class="hero-intro">
+          <h1 id="hero-name"></h1>
+          <div class="muted" id="hero-title"></div>
+        </div>
         <p id="hero-headline"></p>
         <div class="hero-links" id="hero-links"></div>
       </section>
@@ -374,7 +400,7 @@
       <section class="section fade" id="experience">
         <div class="section-head">
           <p class="eyebrow">Experience</p>
-          <h2>Work focused on measurable business and engineering outcomes.</h2>
+          <h2>Simplified career story with the work that drove the biggest outcomes.</h2>
         </div>
         <div class="timeline" id="experience-list"></div>
       </section>
@@ -382,7 +408,7 @@
       <section class="section fade" id="projects">
         <div class="section-head">
           <p class="eyebrow">Selected Projects</p>
-          <h2>Representative work from enterprise machine learning, analytics, and manufacturing systems.</h2>
+          <h2>Representative work across enterprise AI, factory analytics, and computer vision.</h2>
         </div>
         <div class="list-grid" id="project-list"></div>
       </section>
@@ -406,18 +432,10 @@
         </div>
       </section>
 
-      <section class="section fade" id="writing-section" hidden>
-        <div class="section-head">
-          <p class="eyebrow">Writing</p>
-          <h2>Selected articles and long-form writing.</h2>
-        </div>
-        <div class="list-grid" id="writing-list"></div>
-      </section>
-
       <section class="section fade" id="contact">
         <div class="section-head">
           <p class="eyebrow">Contact</p>
-          <h2>Open to interesting conversations.</h2>
+          <h2>Open to thoughtful conversations.</h2>
         </div>
         <p class="contact-line" id="contact-line"></p>
         <div class="hero-links" id="contact-links" style="margin-top:16px;"></div>
@@ -428,60 +446,28 @@
   <script>
     const CONFIG = {
       name: "Abhijeet Khandelwal",
-      title: "Senior Staff Machine Learning Engineer",
-      headline: "I have delivered GenAI, machine learning, and analytics systems at Intel that increased factory productivity, generated tens of millions in manufacturing savings, and transformed legacy workflows into scalable cloud-based platforms.",
+      title: "AI Engineering Manager | ML Engineer",
+      headline: "AI engineering manager and machine learning engineer with 12+ years in industry. I build GenAI, machine learning, analytics, and computer vision systems that improve factory productivity, unlock large-scale savings, and modernize complex manufacturing workflows.",
       github: "",
       linkedin: "https://www.linkedin.com/in/abhijeet-khandelwal-9a034728/",
       email: "abhijeetkhandelwal@outlook.com",
       phone: "+1-385-515-8567",
+      resume: "Abhijeet_Khandelwal_Resume.pdf",
       experience: [
         {
           company: "Intel Corporation",
-          role: "Senior Staff Machine Learning Engineer",
-          period: "April 2025 - Present",
-          location: "Austin, Texas",
+          role: "AI Engineering Manager | ML Engineer",
+          period: "April 2019 - Present",
+          location: "Austin, Texas Metropolitan Area",
           bullets: [
-            "Leading the design and deployment of multiple GenAI, machine learning, and analytics applications for semiconductor manufacturing operations.",
-            "Driving architecture decisions with stakeholders, data scientists, and engineers so new systems scale cleanly across factory use cases.",
-            "Mentoring engineers on GenAI frameworks and applied ML while staying hands-on in technical deep-dives and implementation."
+            "Lead and build GenAI, machine learning, analytics, and computer vision applications for semiconductor manufacturing operations.",
+            "Built Intel's inaugural GenAI knowledge platform by integrating SharePoint, Word documents, and factory systems, contributing to a 10% boost in factory productivity.",
+            "Delivered and supported 3 ML and analytics web applications tied to roughly $100M in yearly manufacturing savings.",
+            "Led a team of 12 engineers and data scientists while staying hands-on in architecture, platform design, and mentoring.",
+            "Built CNN-based defect detection, localization, and quality prediction systems that contributed to $30M in yearly savings and a 15% lift in developer productivity through cloud modernization.",
+            "Developed large-scale Python, Airflow, and Modin ETL frameworks that standardized health metrics across Intel products and sites, saving work equivalent to 4 full-time employees."
           ],
-          stack: ["GenAI", "Machine Learning", "Analytics", "Architecture", "Semiconductor Manufacturing"]
-        },
-        {
-          company: "Intel Corporation",
-          role: "Software Engineering Manager",
-          period: "August 2022 - April 2025",
-          location: "Austin, Texas",
-          bullets: [
-            "Led a team of 12 engineers and data scientists that delivered and maintained 3 complex ML and analytics web applications tied to roughly $100M in yearly manufacturing savings.",
-            "Spearheaded Intel's inaugural GenAI platform, integrating SharePoint, Word documents, and factory systems to improve knowledge discovery, root cause analysis, and proactive risk mitigation, contributing to a 10% productivity boost.",
-            "Improved solution delivery by 16% through a stronger DevOps framework and agile execution model."
-          ],
-          stack: ["GenAI", "ML Web Apps", "DevOps", "Agile", "Factory Systems"]
-        },
-        {
-          company: "Intel Corporation",
-          role: "Staff Machine Learning Engineer",
-          period: "April 2021 - August 2022",
-          location: "Austin, Texas",
-          bullets: [
-            "Built an end-to-end CNN solution for image classification and localization in semiconductor manufacturing, later referenced in an invited SPIE paper.",
-            "Developed a KPI and quality prediction dashboard that combined structured and unstructured data for near real-time finished product quality insight.",
-            "Helped re-architect legacy solutions into cloud-based systems, contributing to $30M in yearly savings from ML-based defect detection and a 15% lift in developer productivity."
-          ],
-          stack: ["CNN", "Computer Vision", "Quality Prediction", "Cloud Migration", "Analytics"]
-        },
-        {
-          company: "Intel Corporation",
-          role: "Senior Data Scientist",
-          period: "April 2019 - April 2021",
-          location: "Austin, Texas",
-          bullets: [
-            "Built a large-scale ETL framework with Python, Airflow, and Modin to calculate critical health metrics across Intel products and sites.",
-            "Developed autoencoder- and GAN-based pipelines to generate minority-class data for downstream image classification models.",
-            "Standardized metric calculations and reporting, saving effort equivalent to 4 full-time employees."
-          ],
-          stack: ["Python", "Airflow", "Modin", "GANs", "Power BI", "Dash"]
+          stack: ["GenAI", "Machine Learning", "Computer Vision", "Analytics", "Leadership", "Semiconductor Manufacturing"]
         },
         {
           company: "EXL Services",
@@ -510,22 +496,22 @@
       ],
       projects: [
         {
-          title: "Intel GenAI Knowledge Platform",
-          description: "An enterprise GenAI platform that connected SharePoint, Word documents, and factory systems so engineers could find operational knowledge and accelerate root cause analysis.",
+          title: "Enterprise GenAI Knowledge Platform",
+          description: "A GenAI platform that connected SharePoint, Word documents, and factory systems so engineers could find operational knowledge faster and accelerate root cause analysis.",
           impact: "Contributed to a 10% productivity boost in semiconductor manufacturing workflows.",
           stack: ["GenAI", "Knowledge Discovery", "Enterprise Search", "Factory Systems"],
           github: ""
         },
         {
-          title: "CNN Defect Detection and Localization",
+          title: "Defect Detection and Localization",
           description: "A computer vision pipeline for image classification and localization in semiconductor manufacturing, built to strengthen defect detection and virtual metrology workflows.",
           impact: "Associated with $30M in yearly savings and an invited SPIE publication.",
           stack: ["CNN", "Computer Vision", "Image Localization", "Semiconductor Manufacturing"],
           github: ""
         },
         {
-          title: "Factory Health ETL Framework",
-          description: "A large-scale ETL system that standardized critical health metrics across Intel products and sites for more consistent analytics and reporting.",
+          title: "Factory Health ETL Platform",
+          description: "A large-scale ETL system that standardized critical health metrics across products and sites for more consistent analytics and reporting.",
           impact: "Saved work equivalent to 4 full-time employees.",
           stack: ["Python", "Airflow", "Modin", "ETL", "Metrics Standardization"],
           github: ""
@@ -539,19 +525,19 @@
         }
       ],
       skills: {
-        "Languages": ["Python", "SQL", "R", "Scala", "Perl", "Java", "JavaScript", "HTML"],
-        "ML Frameworks": ["LangChain", "LangGraph", "AutoGen", "PGVector", "TensorFlow", "PyTorch", "Spark"],
-        "Infrastructure": ["Git", "CI/CD", "Docker", "Airflow", "Ansible", "Kafka", "Sentry", "HBase", "MongoDB", "Azure Blob", "MySQL", "SQL Server", "Redis"],
-        "Domains": ["GenAI", "Machine Learning", "Analytics", "Computer Vision", "MLOps", "Semiconductor Manufacturing", "Predictive Analytics", "Data Visualization"]
+        "AI & ML": ["GenAI", "Machine Learning", "Computer Vision", "LangChain", "LangGraph", "AutoGen", "PGVector", "TensorFlow", "PyTorch", "Spark"],
+        "Languages": ["Python", "SQL", "R", "Scala", "Java", "JavaScript", "HTML", "Perl"],
+        "Data & Platform": ["Airflow", "Docker", "Git", "CI/CD", "Ansible", "Kafka", "Sentry", "Power BI", "Dash", "Tableau", "JMP"],
+        "Data Stores": ["HBase", "MongoDB", "Azure Blob", "MySQL", "SQL Server", "Redis"],
+        "Focus Areas": ["Semiconductor Manufacturing", "Analytics", "Predictive Analytics", "MLOps", "Enterprise AI", "Data Visualization"]
       },
       education: {
         degree: "Master of Science in Information Systems, Concentration in Data Analytics",
         institution: "University at Buffalo, School of Management",
         year: "2018",
         additional: [
-          "Bachelor of Science in Mechanical Engineering — Rajiv Gandhi Technical University (2013)",
-          "Coursework: Statistics, Advanced Statistics, Machine Learning, Predictive Analytics, DBMS, Distributed Computing, and OLAP / Data Warehousing.",
-          "Certifications: SAS Base Programmer, ITIL V3 Foundation, Six Sigma Yellow Belt, Deep Learning Specialization, MLOps Specialization.",
+          "Bachelor of Science in Mechanical Engineering - Rajiv Gandhi Technical University (2013)",
+          "Certifications: SAS Base Programmer, ITIL V3 Foundation, Six Sigma Yellow Belt, Deep Learning Specialization, and MLOps Specialization.",
           "Recognition: 2 Group Recognition Awards, 16 Intel Division Recognition Awards, Intel Excellent Achievement Award, Superior Department Award, and 25+ peer recognitions."
         ]
       },
@@ -562,8 +548,7 @@
           year: "2025",
           url: "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202502264724243383"
         }
-      ],
-      writing: []
+      ]
     };
 
     const icon = {
@@ -596,6 +581,13 @@
     };
 
     const heroLinks = qs("#hero-links");
+    if (CONFIG.resume) {
+      const resumeLink = ce("a", "primary-link");
+      resumeLink.href = CONFIG.resume;
+      resumeLink.setAttribute("download", "");
+      resumeLink.textContent = "Download resume";
+      heroLinks.appendChild(resumeLink);
+    }
     if (CONFIG.github) heroLinks.appendChild(renderIconLink(CONFIG.github, "github", "GitHub"));
     if (CONFIG.linkedin) heroLinks.appendChild(renderIconLink(CONFIG.linkedin, "linkedin", "LinkedIn"));
     if (CONFIG.email) heroLinks.appendChild(renderIconLink(`mailto:${CONFIG.email}`, "email", "Email"));
@@ -605,8 +597,8 @@
       const article = ce("article", "timeline-item");
       const wrap = ce("div", "role-header");
       wrap.innerHTML = `
-        <h3>${item.company} — ${item.role}</h3>
-        <div class="role-meta">${item.period} · ${item.location}</div>
+        <h3>${item.company} - ${item.role}</h3>
+        <div class="role-meta">${item.period} - ${item.location}</div>
       `;
       const bullets = ce("ul", "bullet-list");
       item.bullets.forEach((bullet) => {
@@ -638,12 +630,6 @@
         stack.appendChild(span);
       });
       item.append(top, desc, stack);
-      if (project.github) {
-        const link = document.createElement("p");
-        link.className = "muted";
-        link.innerHTML = `<a href="${project.github}" target="_blank" rel="noreferrer">GitHub</a>`;
-        item.appendChild(link);
-      }
       projectList.appendChild(item);
     });
 
@@ -656,7 +642,7 @@
 
     const educationBlock = qs("#education-block");
     const eduPrimary = ce("div", "edu-line");
-    eduPrimary.innerHTML = `<h3>${CONFIG.education.degree}</h3><p>${CONFIG.education.institution} · ${CONFIG.education.year}</p>`;
+    eduPrimary.innerHTML = `<h3>${CONFIG.education.degree}</h3><p>${CONFIG.education.institution} - ${CONFIG.education.year}</p>`;
     educationBlock.appendChild(eduPrimary);
     (CONFIG.education.additional || []).forEach((line) => {
       const p = document.createElement("p");
@@ -669,26 +655,22 @@
     if (CONFIG.publications.length) {
       CONFIG.publications.forEach((pub) => {
         const line = ce("div", "edu-line");
-        line.innerHTML = `<h3>${pub.title}</h3><p><a href="${pub.url}" target="_blank" rel="noreferrer">${pub.venue}</a> · ${pub.year}</p>`;
+        line.innerHTML = `<h3>${pub.title}</h3><p><a href="${pub.url}" target="_blank" rel="noreferrer">${pub.venue}</a> - ${pub.year}</p>`;
         publicationBlock.appendChild(line);
       });
     } else {
       publicationBlock.innerHTML = "<p>No publications listed.</p>";
     }
 
-    const writingSection = qs("#writing-section");
-    if (CONFIG.writing.length) {
-      writingSection.hidden = false;
-      const writingList = qs("#writing-list");
-      CONFIG.writing.forEach((entry) => {
-        const item = ce("article", "writing-item");
-        item.innerHTML = `<h3><a href="${entry.url}" target="_blank" rel="noreferrer">${entry.title}</a></h3><p>${entry.description}</p>`;
-        writingList.appendChild(item);
-      });
-    }
-
-    qs("#contact-line").innerHTML = `Open to interesting conversations — reach me at <a href="mailto:${CONFIG.email}">${CONFIG.email}</a>.`;
+    qs("#contact-line").innerHTML = `Open to thoughtful conversations around AI engineering, ML platforms, and manufacturing systems - reach me at <a href="mailto:${CONFIG.email}">${CONFIG.email}</a>.`;
     const contactLinks = qs("#contact-links");
+    if (CONFIG.resume) {
+      const contactResume = ce("a", "primary-link");
+      contactResume.href = CONFIG.resume;
+      contactResume.setAttribute("download", "");
+      contactResume.textContent = "Download resume";
+      contactLinks.appendChild(contactResume);
+    }
     if (CONFIG.github) contactLinks.appendChild(renderIconLink(CONFIG.github, "github", "GitHub"));
     if (CONFIG.linkedin) contactLinks.appendChild(renderIconLink(CONFIG.linkedin, "linkedin", "LinkedIn"));
     if (CONFIG.email) contactLinks.appendChild(renderIconLink(`mailto:${CONFIG.email}`, "email", "Email"));
@@ -709,6 +691,7 @@
 
     const sections = [...document.querySelectorAll("main .section[id]")];
     const navItems = [...document.querySelectorAll(".nav-links a")];
+
     const setActiveSection = () => {
       const marker = window.scrollY + window.innerHeight * 0.3;
       let current = "experience";
