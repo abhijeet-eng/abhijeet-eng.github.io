@@ -28,16 +28,16 @@ PROFILE = {
     "linkedin": "https://www.linkedin.com/in/abhijeet-khandelwal-9a034728/",
     "portfolio": "https://abhijeet-eng.github.io/",
     "summary": (
-        "AI engineering manager and machine learning engineer with 12+ years of experience designing, "
-        "scaling, and delivering production AI, analytics, and data platforms. Combines hands-on system "
-        "architecture with people leadership, including launching Intel's first GenAI knowledge platform, "
-        "leading multidisciplinary teams, and delivering applications tied to measurable factory productivity "
-        "gains, material savings, and modernized engineering workflows."
+        "AI engineering manager and machine learning engineer with 12+ years of experience designing and "
+        "scaling production AI, analytics, and data platforms. Brings hands-on depth in enterprise GenAI "
+        "systems together with organizational leadership and business execution, including building an "
+        "Intel Foundry-wide GenAI platform embedded in day-to-day engineering and manufacturing workflows and delivering systems tied to "
+        "measurable productivity gains, savings, and modernized engineering workflows."
     ),
     "highlights": [
-        ("12+ years", "Building production software, ML, and analytics systems"),
-        ("10% gain", "Factory productivity improvement from GenAI knowledge workflows"),
-        ("~$100M", "Yearly manufacturing savings supported by delivered applications"),
+        ("Foundry-wide", "Daily GenAI platform usage across Intel Foundry"),
+        ("10% gain", "Productivity improvement from GenAI workflows"),
+        ("~$100M", "Yearly savings supported by delivered applications"),
     ],
     "experience": [
         {
@@ -46,9 +46,11 @@ PROFILE = {
             "period": "April 2019 - Present",
             "location": "Austin, Texas Metropolitan Area",
             "bullets": [
-                "Directed the design and delivery of GenAI, machine learning, analytics, and computer vision solutions supporting semiconductor manufacturing operations.",
-                "Launched Intel's first GenAI knowledge platform by integrating SharePoint, Word documents, and factory systems, contributing to a 10% improvement in factory productivity.",
-                "Led a 12-person team of software engineers and data scientists while remaining hands-on in architecture, technical direction, and mentoring.",
+                "Directed strategy, architecture, and delivery of GenAI, machine learning, analytics, and computer vision solutions for semiconductor manufacturing.",
+                "Built and scaled Intel Foundry's GenAI platform into a Foundry-wide enterprise system supporting day-to-day engineering and manufacturing workflows.",
+                "Designed multi-source knowledge discovery and retrieval workflows across SharePoint, Word documents, and factory systems to improve knowledge access, root cause analysis, and decision support.",
+                "Partnered with business stakeholders, factory engineers, data scientists, and software teams to align roadmap, adoption, governance, and value realization, contributing to a 10% improvement in factory productivity.",
+                "Led a 12-person team of engineers and data scientists while remaining hands-on in architecture reviews, platform design, technical direction, and mentoring.",
                 "Delivered 3 production ML and analytics applications supporting roughly $100M in yearly manufacturing savings.",
                 "Built CNN-based defect detection, localization, and quality prediction systems that contributed to $30M in yearly savings and improved developer productivity by 15% through cloud modernization.",
                 "Developed large-scale Python, Airflow, and Modin ETL frameworks that standardized health metrics across Intel products and sites, saving work equivalent to 4 full-time employees.",
@@ -76,9 +78,9 @@ PROFILE = {
         },
     ],
     "skills": [
-        ("AI & ML", "GenAI, machine learning, computer vision, LangChain, LangGraph, AutoGen, PGVector, TensorFlow, PyTorch, Spark"),
+        ("AI & ML", "GenAI, RAG, enterprise search, AI agents, machine learning, computer vision, LangChain, LangGraph, AutoGen, PGVector, TensorFlow, PyTorch, Spark"),
         ("Languages", "Python, SQL, R, Scala, Java, JavaScript, HTML, Perl"),
-        ("Platform", "Airflow, Docker, Git, CI/CD, Ansible, Kafka, Sentry"),
+        ("Platform", "Platform architecture, Airflow, Docker, Git, CI/CD, Ansible, Kafka, Sentry"),
         ("Analytics", "Power BI, Dash, Tableau, JMP, predictive analytics, data visualization"),
         ("Data Stores", "HBase, MongoDB, Azure Blob, MySQL, SQL Server, Redis"),
     ],
@@ -150,8 +152,8 @@ def build_styles():
             leading=12,
             textColor=colors.HexColor("#0f766e"),
             alignment=TA_LEFT,
-            spaceBefore=7,
-            spaceAfter=3,
+            spaceBefore=5,
+            spaceAfter=2,
         )
     )
     styles.add(
@@ -159,8 +161,8 @@ def build_styles():
             name="Body",
             parent=styles["Normal"],
             fontName="Helvetica",
-            fontSize=9.3,
-            leading=12.2,
+            fontSize=9.0,
+            leading=11.5,
             textColor=colors.HexColor("#1f2937"),
             alignment=TA_LEFT,
         )
@@ -170,8 +172,8 @@ def build_styles():
             name="BodyMuted",
             parent=styles["Normal"],
             fontName="Helvetica",
-            fontSize=8.7,
-            leading=10.8,
+            fontSize=8.5,
+            leading=10.2,
             textColor=colors.HexColor("#4b5563"),
             alignment=TA_LEFT,
         )
@@ -182,7 +184,7 @@ def build_styles():
             parent=styles["Normal"],
             fontName="Helvetica-Bold",
             fontSize=10.1,
-            leading=12.2,
+            leading=11.8,
             textColor=colors.HexColor("#111827"),
             alignment=TA_LEFT,
         )
@@ -192,8 +194,8 @@ def build_styles():
             name="RoleMeta",
             parent=styles["Normal"],
             fontName="Helvetica",
-            fontSize=8.7,
-            leading=10.8,
+            fontSize=8.5,
+            leading=10.0,
             textColor=colors.HexColor("#6b7280"),
             alignment=TA_LEFT,
         )
@@ -233,7 +235,7 @@ def add_section(story, title, styles):
             lineCap="round",
             color=colors.HexColor("#d7dde3"),
             spaceBefore=1,
-            spaceAfter=6,
+            spaceAfter=4,
         )
     )
 
@@ -248,9 +250,9 @@ def bullet_list(bullets, styles):
         bulletType="bullet",
         leftIndent=12,
         bulletFontName="Helvetica",
-        bulletFontSize=7.5,
-        spaceBefore=2,
-        spaceAfter=4,
+        bulletFontSize=7.0,
+        spaceBefore=1,
+        spaceAfter=3,
     )
 
 
@@ -324,10 +326,10 @@ def build_resume():
                 ("BOX", (0, 0), (-1, -1), 0.7, colors.HexColor("#d4ebe7")),
                 ("INNERGRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#d4ebe7")),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 8),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-                ("TOPPADDING", (0, 0), (-1, -1), 7),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
+                ("LEFTPADDING", (0, 0), (-1, -1), 6),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+                ("TOPPADDING", (0, 0), (-1, -1), 5),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
             ]
         )
     )
@@ -343,7 +345,8 @@ def build_resume():
         ]
         story.append(KeepTogether(block))
 
-    add_section(story, "Core Expertise", styles)
+    skills_block = []
+    add_section(skills_block, "Core Expertise", styles)
     skill_rows = []
     for label, value in PROFILE["skills"]:
         skill_rows.append(
@@ -359,19 +362,22 @@ def build_resume():
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
                 ("LEFTPADDING", (0, 0), (-1, -1), 0),
                 ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-                ("TOPPADDING", (0, 0), (-1, -1), 2),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+                ("TOPPADDING", (0, 0), (-1, -1), 1),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
                 ("LINEBELOW", (0, 0), (-1, -2), 0.25, colors.HexColor("#d7dde3")),
             ]
         )
     )
-    story.append(skill_table)
+    skills_block.append(skill_table)
+    story.append(KeepTogether(skills_block))
 
-    add_section(story, "Education", styles)
+    education_block = []
+    add_section(education_block, "Education", styles)
     for line in PROFILE["education"]:
-        story.append(Paragraph(line, styles["Body"]))
-    story.append(Spacer(1, 0.03 * inch))
-    story.append(Paragraph(f'<b>Certifications:</b> {PROFILE["certifications"]}', styles["Body"]))
+        education_block.append(Paragraph(line, styles["Body"]))
+    education_block.append(Spacer(1, 0.03 * inch))
+    education_block.append(Paragraph(f'<b>Certifications:</b> {PROFILE["certifications"]}', styles["Body"]))
+    story.append(KeepTogether(education_block))
 
     add_section(story, "Publication", styles)
     pub = PROFILE["publication"]
